@@ -40,7 +40,7 @@ def get_reservation():
         reservation_token = request.args.get('reservation_token', '')
 
         current_datetime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        query = 'SELECT reservation_first_name, reservation_last_name, reservation_datetime, phone_number, number_of_guests FROM reservations WHERE reservation_datetime >= ? AND reservation_token = ?'
+        query = 'SELECT id, reservation_first_name, reservation_last_name, reservation_datetime, phone_number, number_of_guests FROM reservations WHERE reservation_datetime >= ? AND reservation_token = ?'
         reservation = cur.execute(query, (current_datetime, reservation_token)).fetchone()
         con.close()
 

@@ -1,0 +1,11 @@
+Python ^3.8.10
+flask ^2.3.3
+Flask-Cors ^4.0.0
+SQLite
+
+# Instructions to installation and deployment
+
+    1. Make sure database.db exists if not create a file name database.db
+    2. Run python script file 'create_table.py'
+    3  Run python script file 'app.py' 
+
